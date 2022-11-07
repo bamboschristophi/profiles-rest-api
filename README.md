@@ -20,22 +20,33 @@ To halt the vagrant machine now.
 
 Other useful commands are **suspend, destroy** etc.
 
+To connect to Vagrant Server  
+
+**vagrant ssh  
+cd /Vagrant**
+
 ## Python Virtual Environment - On Server
 
 create a virtual environment - this is done outside project folder to avoid the auto syncing  
 **python -m venv ~/env**
 
-activate/deactivate virtual environment - first navigate to vagrant folder on server
+activate/deactivate virtual environment - first navigate to vagrant folder on server  
 **source ~/env/bin/activate**  
 **source ~/env/bin/deactivate**
 
+run on server project directory (ensure venv activated)  
+**pip install -r requirements.txt**
+
 ## Django
 
-Run Server (on server) in this location: (env) vagrant@ubuntu-bionic:/vagrant$  
+Run Server (on server) in this location: **(env) vagrant@ubuntu-bionic:/vagrant$**  
 **python manage.py runserver 0.0.0.0:8000**
 
 view project on localhost  
 **http://localhost:8000/**
+
+Django Admin  
+**http://localhost:8000/admin**
 
 ## Atom   
 
